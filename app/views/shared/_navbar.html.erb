@@ -1,8 +1,10 @@
+
 <div class="d-flex justify-content-between align-items-center px-4 py-2 border-bottom">
-  <%= link_to (image_tag "logo.png", height: 50), root_path %>
+  <%= link_to (image_tag "f480c90c0574dd5a0baaf69a63976d1c.png", height: 55), root_path %>
+  <p class="accueil" ahref> <%= link_to "Fest'inBordeaux", root_path %> </p>
   <% if user_signed_in? %>
-    <%= link_to t(".sign_out", default: "Log out"), destroy_user_session_path, method: :delete %>
+    <%= link_to t(".sign_out", default: "Se déconnecter"), destroy_user_session_path, method: :delete %>
   <% else %>
-    <%= link_to t(".sign_in", default: "Login"), new_user_session_path %>
+    <%= link_to t(".sign_in", default: "Se connecter"), new_user_session_path %>
   <% end %>
 </div>

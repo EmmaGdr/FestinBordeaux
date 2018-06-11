@@ -1,0 +1,17 @@
+<div class="container shadow bg-white rounded p-4 text-center my-5 mb-4">
+<h1><%= @article.title %></h1>
+<p><%= "*" * @article.stars %></p>
+<h2><%= @article.created_at.strftime("%d %b %Y") %></h2>
+<p class="contenu"><%= @article.content %></p>
+
+<%= link_to "Supprimer cet article", article_path(@article.id), method: :delete, class: "btn
+btn-danger" %>
+
+<%= link_to "Editer cet article", edit_article_path(@article.id), class: "btn btn-primary" %>
+
+<%= link_to "Retour", articles_path, class: "btn btn-primary" %>
+
+<div class="footer">
+	<p> contact@festinbordeaux.com </p>
+</div>
+</div>

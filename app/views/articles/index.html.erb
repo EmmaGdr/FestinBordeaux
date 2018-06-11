@@ -1,0 +1,23 @@
+<div class="text-center">
+		
+		<%= link_to "Nouvel article", new_article_path, class: "btn btn-primary" %>
+	</div>
+	<div class="container">
+		<div class="row">
+			<% @articles.each do |article| %>
+				<div class="col-12">
+					<div class="shadow bg-white rounded m-4 p-5 d-flex justify-content-between">
+					<%= link_to article_path(article) do %>
+						<h2><%= article.title %></h2>
+					<% end %>
+					<br><h2><%= "*" * article.stars %></h2>
+					<p><b><%= article.created_at.strftime("%D") %></b></p>
+					</div>
+				</div>
+			<% end %>
+		</div>
+			</div>
+
+		<div class="footer2">
+	<p> contact@festinbordeaux.com </p>
+</div>
